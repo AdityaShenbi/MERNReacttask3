@@ -1,23 +1,14 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import ColorPicker from './Components/C2'; 
 
 function App() {
+  const colorOptions = ['red', 'lime', 'blue', 'yellow', 'fuchsia','aqua','orange','darkmagenta','lightpink','green','lightcoral','mediumturquoise','brown','darkorange','cadetblue','gold'];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Color Picker</h1>
+      <div className = "block"><ColorPicker colors={colorOptions} /> </div>
     </div>
   );
 }
